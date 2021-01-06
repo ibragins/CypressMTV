@@ -1,6 +1,13 @@
 import {ProviderData} from "../types/types";
-import {addProvider, button, remove, selectProviderType, vmware} from "../types/constants";
-import {click, clickKebab} from "../../utils/utils";
+import {
+    addProvider,
+    button,
+    remove,
+    selectProviderType,
+    tr,
+    vmware
+} from "../types/constants";
+import {click, clickWithNoText} from "../../utils/utils";
 import {kebab, kebabDropDownItem} from "../views/provider.view";
 import {providerData} from "../config";
 import {vmwareMenu} from "../views/providerVmware.view";
@@ -21,9 +28,9 @@ export class Provider {
     delete(){
         click(vmwareMenu, vmware)
         cy.contains(providerData.name)
-            .parent('tr')
+            .parent(tr)
             .within(() => {
-                clickKebab(kebab)
+                clickWithNoText(kebab)
             })
         click(kebabDropDownItem, remove)
         click(button, remove)

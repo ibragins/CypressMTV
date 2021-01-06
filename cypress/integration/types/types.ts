@@ -8,6 +8,8 @@ export type MappingData = {
     name: string;
     sProviderName: string;
     tProviderName: string;
+    sProvider: string;
+    dProvider: string;
 }
 
 export type ProviderData = {
@@ -22,6 +24,6 @@ export type ProviderData = {
 export type TestData = {
     loginData: LoginData;
     providerData: ProviderData;
-    networkMappingData: MappingData;
-    storageMappingData: MappingData;
+    networkMappingData: MappingData[];
+    storageMappingData: MappingData[];
 }

@@ -1,19 +1,17 @@
 import {Mapping} from "./mapping";
-import {nav_toggle} from "../views/menu.view";
-import {clickKebab, inputText} from "../../utils/utils";
-import * as view from "../views/mapping.view";
+import {click} from "../../utils/utils";
+import {storage} from "../types/constants";
+import {menuNavLink} from "../views/mapping.view";
 
 export class MappingStorage extends Mapping{
-    create(){
-        cy.get(nav_toggle)
-            .should('have.attr', 'aria-expanded')
-            .and('have.value', 'false')
-            .then(() => {
-                clickKebab(nav_toggle);
-            })
-        inputText(view.mappingName, this.mappingData.name);
-        this.selectSourceProvider();
-        this.selectTargetProvider();
-    }
+    create() {
+        //Navigating to the sidebar menu
+        this.openMenu()
 
+        //Clicking on Network menu item
+        click(menuNavLink, storage)
+
+        //Creating new mapping instance
+        this.createDialog()
+    }
 }

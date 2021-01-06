@@ -19,17 +19,25 @@ export const providerData: ProviderData = {
     cert: '7E:E7:4C:5C:3C:0E:51:D2:D7:8B:89:F1:DF:0A:9E:A5:D6:13:98:F6',
 }
 
-export const networkMappingData: MappingData = {
-    name: 'string',
-    sProviderName: 'string',
-    tProviderName: 'string',
-}
+export const networkMappingData: MappingData[] = [
+    {
+        name: 'network-qe-vmware-mapping',
+        sProviderName: 'qe-vmware',
+        tProviderName: 'host',
+        sProvider: 'VM Network',
+        dProvider: 'Pod network'
+    }
+]
 
-export const storageMappingData: MappingData = {
-    name: 'string',
-    sProviderName: 'string',
-    tProviderName: 'string',
-}
+export const storageMappingData: MappingData[] = [
+    {
+        name: 'storage-qe-vmware-mapping',
+        sProviderName: 'qe-vmware',
+        tProviderName: 'host',
+        sProvider: 'env-esxi67-ims-h02_localdisk',
+        dProvider:'nfs'
+    }
+]
 
 export const testData: TestData = {
     loginData: loginData,

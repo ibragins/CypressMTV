@@ -1,6 +1,7 @@
 import { LoginData } from "../integration/types/types";
 import * as loginView from "../integration/views/login.view";
 import { button, loginButton } from "../integration/types/constants"
+import {nav_toggle, page_sidebar, sidebar_collapsed} from "../integration/views/menu.view";
 
 export function inputText(fieldId: string, text: string){
     cy.get(fieldId).type(text);
@@ -11,7 +12,7 @@ export function click(fieldId: string, buttonText: string){
         .click();
 }
 
-export function clickKebab(fieldId: string) {
+export function clickWithNoText(fieldId: string) {
     cy.get(fieldId)
         .click()
 }
@@ -22,4 +23,13 @@ export function login(loginData: LoginData) {
     inputText(loginView.userPasswordInput, loginData.password);
     click(button, loginButton);
     click(button, 'Get started')
+}
+
+export function openSidebarMenu() {
+    // Checking if sidebar is collapsed and opening it if required
+    cy.get(page_sidebar).then(($sidebar) => {
+        if ($sidebar.hasClass(sidebar_collapsed)) {
+            clickWithNoText(nav_toggle);
+        }
+    })
 }

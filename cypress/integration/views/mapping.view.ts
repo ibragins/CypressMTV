@@ -1,3 +1,6 @@
 export const mappingName = "#mapping-name"
-export const sProvider = "Select a source provider..."
-export const tProvider = "Select a target provider..."
+// export const inputClass = 'input.pf-c-form-control.pf-c-select__toggle-typeahead'
+export const inputAttr = 'aria-label'
+export const buttonNavLink = 'button.pf-c-nav__link'
+export const buttonPrimary = 'button.pf-c-button.pf-m-primary'
+export const menuNavLink = 'a.pf-c-nav__link'

@@ -1,5 +1,5 @@
-import {LoginData, MappingData, PlanData, ProviderData, TestData} from './types/types'
-import {vmware} from "./types/constants";
+import {LoginData, MappingData, PlanData, ProviderData, TestData} from '../types/types'
+import {vmware} from "../types/constants";
 const url = Cypress.env('url');
 const user_login = 'kubeadmin'
 const user_password = Cypress.env('pass');

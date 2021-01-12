@@ -9,7 +9,7 @@ import {
 } from "../types/constants";
 import {click, clickWithNoText} from "../../utils/utils";
 import {kebab, kebabDropDownItem} from "../views/provider.view";
-import {providerData} from "../config";
+import {providerData} from "../tests/config";
 import {vmwareMenu} from "../views/providerVmware.view";
 
 export class Provider {

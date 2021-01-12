@@ -1,7 +1,7 @@
 import {testData} from './config';
-import {login} from "../utils/utils";
-import {ProviderVmware} from "./models/providerVmware"
-import {MappingNetwork} from "./models/mappingNetwork";
+import {login} from "../../utils/utils";
+import {ProviderVmware} from "../models/providerVmware"
+import {MappingNetwork} from "../models/mappingNetwork";
 
 describe('Login to MTV', () => {
   it.skip('Login to MTV', () => {

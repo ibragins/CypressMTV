@@ -1,7 +1,7 @@
-import {MappingNetwork} from "./models/mappingNetwork";
+import {MappingNetwork} from "../models/mappingNetwork";
 import {testData} from "./config";
-import {login} from "../utils/utils";
-import {MappingStorage} from "./models/mappingStorage";
+import {login} from "../../utils/utils";
+import {MappingStorage} from "../models/mappingStorage";
 
 describe('Create new Network and Storage mappings', () => {
     const networkMapping = new MappingNetwork(testData.planData.networkMappingData[0])

@@ -21,9 +21,12 @@ export type ProviderData = {
     cert: string;
 }
 
-export type TestData = {
-    loginData: LoginData;
+export type PlanData = {
     providerData: ProviderData;
     networkMappingData: MappingData[];
     storageMappingData: MappingData[];
+}
+export type TestData = {
+    loginData: LoginData;
+    planData: PlanData;
 }

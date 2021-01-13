@@ -32,7 +32,7 @@ export const networkMappingData: MappingData[] = [
 export const storageMappingData: MappingData[] = [
     {
         name: 'storage-qe-vmware-mapping',
-        sProviderName: 'qe-vmware',
+        sProviderName: providerData.name,
         tProviderName: 'host',
         sProvider: 'env-esxi67-ims-h02_localdisk',
         dProvider:'nfs'
@@ -40,6 +40,14 @@ export const storageMappingData: MappingData[] = [
 ]
 
 export const planData: PlanData = {
+    name: 'testplan',
+    sProvider: providerData.name,
+    tProvider: 'host',
+    namespace: 'Default',
+    vmwareSourceFqdn: '',
+    vmwareSourceVms: ['v2v-vm-igor'],
+    useExistingNetworkMapping: true,
+    useExistingStorageMapping: true,
     providerData: providerData,
     networkMappingData: networkMappingData,
     storageMappingData: storageMappingData

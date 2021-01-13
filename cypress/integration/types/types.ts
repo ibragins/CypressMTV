@@ -22,6 +22,15 @@ export type ProviderData = {
 }
 
 export type PlanData = {
+    name: string;
+    description?: string;
+    sProvider: string;
+    tProvider: string;
+    namespace: string;
+    vmwareSourceFqdn: string;
+    vmwareSourceVms: string[];
+    useExistingNetworkMapping: boolean;
+    useExistingStorageMapping: boolean;
     providerData: ProviderData;
     networkMappingData: MappingData[];
     storageMappingData: MappingData[];
